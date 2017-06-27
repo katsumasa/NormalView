@@ -28,12 +28,21 @@ public class NormalView : MonoBehaviour {
 	/// 従法線を描画するか否か
 	/// </summary>
 	public bool isRenderBinormal = true;
+	/// <summary>
+	/// The is normal check first.
+	/// </summary>
+	bool isNormalCheckFirst = true;
+	/// <summary>
+	/// The is tangent check first.
+	/// </summary>
+	bool isTangentCheckFirst = true;
 
-	
+
+
 	// Update is called once per frame
 	void Update () {
 		#if UNITY_EDITOR
-		RenderLines();
+			RenderLines();
 		#endif
 	}
 
@@ -56,17 +65,32 @@ public class NormalView : MonoBehaviour {
 		for (var i = 0; i < meshFilters.Length; i++) {
 			var mesh = meshFilters[i].sharedMesh;
 			for (var j = 0; j < mesh.normals.Length; j++) {
-				var n = mesh.normals [j];
-				var t = mesh.tangents [j];
 				var v = mesh.vertices [j];
-				var t3 = new Vector3 (t.x, t.y, t.z);
-				var b = Vector3.Cross (n, t3) * t.w;
-
+				if (mesh.normals.Length <= j) {
+					if (isNormalCheckFirst) {
+						Debug.Log ("Normals Length Check!");
+						isNormalCheckFirst = false;
+					}
+					break;
+				}
+				var n = mesh.normals [j];
 				var l1 = meshFilters[i].transform.TransformPoint (v);
 				if (isRenderNormal) {
 					var l2 = meshFilters [i].transform.TransformPoint (n) * scale + l1;
 					Debug.DrawLine (l1, l2, Color.blue);
 				}
+
+				if (mesh.tangents.Length <= j) {
+					if (isTangentCheckFirst) {
+						Debug.Log ("Tangents Length Check!");
+						isTangentCheckFirst = false;
+					}
+					continue;
+				}
+				var t = mesh.tangents [j];
+				var t3 = new Vector3 (t.x, t.y, t.z);
+				var b = Vector3.Cross (n, t3) * t.w;
+
 				if (isRenderTangent) {
 					var l2 = meshFilters [i].transform.TransformPoint (t3) * scale + l1;
 					Debug.DrawLine (l1, l2, Color.red);
