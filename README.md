@@ -16,6 +16,9 @@ GameObjectにNormalView.csを追加します。
 
 ![image](https://user-images.githubusercontent.com/29646672/139005304-add62b61-d19a-49a7-82ec-bdd7ab0a2c1a.png)
 
+
+![959ac4fc7faa3140d9e028f929300f36](https://user-images.githubusercontent.com/29646672/139006857-0d2c0ba5-9b16-4db2-b852-626559a73b5a.gif)
+
 ### scale
 
 線の大きさを設定します
