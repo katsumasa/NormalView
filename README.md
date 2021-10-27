@@ -1,9 +1,11 @@
 # NormalView
 
-## 内容
+## 概要
 
-Scene Viewに法線・接線・従法線を描画するクラス
+Meshに設定されている、法線(Normal Line)・接線(Tangent Line)・従法線(Binormal Line)をScene View上に表示します。
 
 ## 使い方
 
-Meshを持つ対象となるGameObjectにNormalView.csをAttachことでMeshの法線・接線・従法線がScene Viewに表示されます。
+1. GameObjectにNormalView.csを追加するだけです。
+2. 
+

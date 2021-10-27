@@ -1,0 +1,25 @@
+{
+  "name": "com.utj.normalview",
+  "displayName": "NormalView",
+  "version": "0.1.0",
+  "unity": "5.6",
+  "keywords": [
+    "unity",
+    "editor",
+    "tools"
+  ],
+  "description": "The normal line, tangent line, and binormal line of the Mesh are displayed on the Scene View.",
+  "dependencies": {},
+  "author": {
+    "name": "Katsumasa.Kimura",
+    "email": "katsumasa@unity3d.com",
+    "url": "https://github.com/katsumasa"
+  },
+  "relatedPackages": {},
+  "upmCi": {},
+  "repository": {
+    "url": "https://github.com/katsumasa/NormalViewerKun.git",
+    "type": "git",
+    "revision": "v0.1.0"
+  }
+}
