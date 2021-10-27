@@ -4,7 +4,7 @@
 
 ## 概要
 
-Meshに設定されている、法線(Normal Line)・接線(Tangent Line)・従法線(Binormal Line)をScene View上に表示します。
+Meshに設定されている、法線(Normal Line)・接線(Tangent Line)・従法線(Binormal Line)の表示をScene View上に追加します。
 
 ## 動作環境
 
