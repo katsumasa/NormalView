@@ -1,7 +1,7 @@
 {
   "name": "com.utj.normalview",
   "displayName": "NormalView",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "unity": "5.6",
   "keywords": [
     "unity",
@@ -20,6 +20,6 @@
   "repository": {
     "url": "https://github.com/katsumasa/NormalViewerKun.git",
     "type": "git",
-    "revision": "v0.1.0"
+    "revision": "v0.1.1"
   }
 }

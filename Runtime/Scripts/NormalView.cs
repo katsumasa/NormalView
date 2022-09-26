@@ -103,7 +103,7 @@ namespace UTJ.NormalView
 					var l1 = meshFilters[i].transform.TransformPoint(v);
 					if (isRenderNormal)
 					{
-						var l2 = meshFilters[i].transform.TransformPoint(n) * scale + l1;
+						var l2 = n * scale + l1;
 						Debug.DrawLine(l1, l2, Color.blue);
 					}
 
@@ -122,12 +122,12 @@ namespace UTJ.NormalView
 
 					if (isRenderTangent)
 					{
-						var l2 = meshFilters[i].transform.TransformPoint(t3) * scale + l1;
+						var l2 = t3 * scale + l1;
 						Debug.DrawLine(l1, l2, Color.red);
 					}
 					if (isRenderBinormal)
 					{
-						var l2 = meshFilters[i].transform.TransformPoint(b) * scale + l1;
+						var l2 =b * scale + l1;
 						Debug.DrawLine(l1, l2, Color.green);
 					}
 					idx++;
